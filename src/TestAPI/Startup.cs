@@ -36,7 +36,7 @@ namespace TestAPI
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+            
 
             app.UseRouting();
 
