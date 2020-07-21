@@ -21,6 +21,13 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
+- task: DotNetCoreCLI@2
+  displayName: 'Unit Testing'
+  inputs:
+    command: test
+    projects: '**/*Test/*.csproj'
+    configuration: '$(buildConfiguration)'
+
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
